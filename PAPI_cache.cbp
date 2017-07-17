@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="PAPI_cache" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/PAPI_cache" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-march=native" />
+					<Add option="-Weffc++" />
+					<Add option="-Wall" />
+					<Add option="-std=c++14" />
+					<Add option="-m64" />
+					<Add option="-g" />
+					<Add directory="/home/forro/Downloads/papi-5.5.1" />
+					<Add directory="/home/forro/Downloads/papi-5.5.1/src" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add library="/home/forro/Downloads/papi-5.5.1/src/libpapi.a" />
+					<Add library="/home/forro/Downloads/papi-5.5.1/src/libpfm4/lib/libpfm.a" />
+					<Add library="/home/forro/Downloads/papi-5.5.1/src/libpapi.so" />
+					<Add library="/home/forro/Downloads/papi-5.5.1/src/libpfm4/lib/libpfm.so" />
+					<Add directory="/home/forro/Downloads/papi-5.5.1" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/PAPI_cache" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="main.cpp" />
+		<Unit filename="matrix_functions.h" />
+		<Unit filename="papi_utils.cpp" />
+		<Unit filename="papi_utils.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

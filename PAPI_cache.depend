@@ -1,0 +1,178 @@
+# depslib dependency file v1.0
+1480625966 source:/home/forro/Dropbox/PMT/PAPI/PAPI_cache/main.c
+	"matrix_functions.h"
+	"papi_utils.h"
+
+1476450842 /usr/include/stdio.h
+	<features.h>
+	<stddef.h>
+	<bits/types.h>
+	<libio.h>
+	<stdarg.h>
+	<bits/stdio_lim.h>
+	<bits/sys_errlist.h>
+	<getopt.h>
+	<bits/stdio.h>
+	<bits/stdio2.h>
+	<bits/stdio-ldbl.h>
+
+1479336182 /usr/include/features.h
+	<stdc-predef.h>
+	<sys/cdefs.h>
+	<gnu/stubs.h>
+
+1479336182 /usr/include/stdc-predef.h
+
+1476450842 /usr/include/libio.h
+	<_G_config.h>
+	<stdarg.h>
+	<sys/cdefs.h>
+	<shlib-compat.h>
+	<bits/libio-ldbl.h>
+
+1476450842 /usr/include/_G_config.h
+	<bits/types.h>
+	<stddef.h>
+	<wchar.h>
+	<gconv.h>
+
+1476450844 /usr/include/wchar.h
+	<features.h>
+	<stdio.h>
+	<stdarg.h>
+	<bits/wchar.h>
+	<stddef.h>
+	<wctype.h>
+	<xlocale.h>
+	<xlocale.h>
+	<xlocale.h>
+	<wctype.h>
+	<bits/wchar2.h>
+	<bits/wchar-ldbl.h>
+
+1476450848 /usr/include/wctype.h
+	<features.h>
+	<bits/types.h>
+	<wchar.h>
+	<endian.h>
+	<xlocale.h>
+
+1476450843 /usr/include/endian.h
+	<features.h>
+	<bits/endian.h>
+	<bits/byteswap.h>
+
+1479336184 /usr/include/xlocale.h
+
+1476450827 /usr/include/gconv.h
+	<features.h>
+	<wchar.h>
+	<stddef.h>
+
+1476450845 /usr/include/getopt.h
+	<ctype.h>
+
+1476450838 /usr/include/ctype.h
+	<features.h>
+	<bits/types.h>
+	<endian.h>
+	<xlocale.h>
+
+1476450841 /usr/include/stdlib.h
+	<features.h>
+	<stddef.h>
+	<bits/waitflags.h>
+	<bits/waitstatus.h>
+	<xlocale.h>
+	<sys/types.h>
+	<alloca.h>
+	<bits/stdlib-bsearch.h>
+	<bits/stdlib-float.h>
+	<bits/stdlib.h>
+	<bits/stdlib-ldbl.h>
+
+1476450841 /usr/include/alloca.h
+	<features.h>
+	<stddef.h>
+
+1476450841 /usr/include/errno.h
+	<features.h>
+	<bits/errno.h>
+
+1480448065 /usr/include/papi.h
+	<sys/types.h>
+	<limits.h>
+	"papiStdEventDefs.h"
+	<signal.h>
+
+1479336182 /usr/include/limits.h
+	<features.h>
+	<bits/wordsize.h>
+	<bits/posix1_lim.h>
+	<bits/posix2_lim.h>
+	<bits/xopen_lim.h>
+
+1461097774 /usr/include/papiStdEventDefs.h
+
+1479336208 /usr/include/signal.h
+	<features.h>
+	<bits/sigset.h>
+	<bits/types.h>
+	<bits/signum.h>
+	<time.h>
+	<bits/siginfo.h>
+	<bits/sigaction.h>
+	<bits/sigcontext.h>
+	<stddef.h>
+	<bits/sigstack.h>
+	<sys/ucontext.h>
+	<bits/pthreadtypes.h>
+	<bits/sigthread.h>
+
+1479336219 /usr/include/time.h
+	<features.h>
+	<stddef.h>
+	<bits/time.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<xlocale.h>
+
+1488374281 /home/forro/Dropbox/PMT/PAPI/PAPI_cache/matrix_functions.h
+	<cstdio>
+	<cstdlib>
+	<ctime>
+	<iostream>
+
+1480970252 source:/home/forro/Dropbox/PMT/PAPI/PAPI_cache/matrix_functions.c
+	"matrix_functions.h"
+
+1480612472 source:/home/forro/Dropbox/PMT/PAPI/PAPI_cache/papi_utils.c
+	"papi_utils.h"
+
+1480978721 /home/forro/Dropbox/PMT/PAPI/PAPI_cache/papi_utils.h
+	"papi.h"
+	<cstdio>
+	<cstdlib>
+	<cerrno>
+
+1500322454 source:/home/forro/Dropbox/PMT/PAPI/PAPI_cache/papi_utils.cpp
+	"papi_utils.h"
+
+1500322478 source:/home/forro/Dropbox/PMT/PAPI/PAPI_cache/main.cpp
+	"matrix_functions.h"
+	"papi_utils.h"
+
+1480976153 source:/home/forro/Dropbox/PMT/PAPI/PAPI_cache/matrix_functions.cpp
+	"matrix_functions.h"
+
+1500322526 /home/forro/Downloads/papi-5.5.1/src/papi.h
+	<sys/types.h>
+	<limits.h>
+	"papiStdEventDefs.h"
+	<signal.h>
+
+1479496491 /home/forro/Downloads/papi-5.5.1/src/papiStdEventDefs.h
+
