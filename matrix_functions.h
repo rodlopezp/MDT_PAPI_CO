@@ -5,6 +5,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
+#include <array>
 
 /**
  * Estructura base para una matriz de enteros.
@@ -96,7 +97,7 @@ void randFloat_init_matrix(matrix<T>* matrix, float upper_limit){
  *  Algoritmo recursivo que divide el problema hasta un límite (arbitrario), que luego invoca a
  *  matrix_transpose_naive.
 **/
-const int minSubMatrixSize = 4; //Tamaño mínimo de la sub-matriz.
+const int minSubMatrixSize = 8; //Tamaño mínimo de la sub-matriz.
 template <typename T>
 void matrix_transpose_co(matrix<T>* inMatrix, matrix<T>* outMatrix,
                          int rows, int cols, int rowOffset, int colOffset){
@@ -104,12 +105,14 @@ void matrix_transpose_co(matrix<T>* inMatrix, matrix<T>* outMatrix,
         if( cols >= rows){
             const int halfCols = cols / 2;
             matrix_transpose_co(inMatrix, outMatrix, rows, halfCols, rowOffset, colOffset);
-            matrix_transpose_co(inMatrix, outMatrix, rows, halfCols, rowOffset, colOffset + halfCols);
+            matrix_transpose_co(inMatrix, outMatrix, rows, halfCols, rowOffset,
+                                colOffset + halfCols);
         }
         else{
             const int halfRows = rows / 2;
             matrix_transpose_co(inMatrix, outMatrix, halfRows, cols, rowOffset, colOffset);
-            matrix_transpose_co(inMatrix, outMatrix, halfRows, cols, rowOffset + halfRows, colOffset);
+            matrix_transpose_co(inMatrix, outMatrix, halfRows, cols, rowOffset + halfRows,
+                                colOffset);
         }
     }
     else{

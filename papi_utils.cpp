@@ -50,3 +50,11 @@ void PAPI_readCounters(long long int* valuesRead, unsigned int numEvents){
         exit(1);
     }
 }
+
+void PAPI_stopCounters(long long int* valuesRead, unsigned int numEvents){
+    int retVal;
+    if ((retVal = PAPI_stop_counters(valuesRead, numEvents)) != PAPI_OK){
+        fprintf(stderr, "PAPI failed to stop counters: %s\n", PAPI_strerror(retVal));
+        exit(1);
+    }
+}

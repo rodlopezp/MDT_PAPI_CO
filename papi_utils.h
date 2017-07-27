@@ -19,13 +19,13 @@ void PAPI_counterCheck();
 
 /**
  *  Inicia la cuenta de eventos, indicados por los valores de events. Imprime errores a stderr.
- *  Utiliza la función PAPI_start_countes, de la API de bajo nivel.
+ *  Utiliza la función PAPI_start_countes, de la API de alto nivel.
  **/
 void PAPI_startCounters(int* events, unsigned int numEvents);
 
 /**
  *  Lee valores de los contadores, y los almacena en el array de long long indicado por valuesRead.
- *  Imprime errorres a stderr. Utiliza la función PAPI_read_counters de la API de bajo nivel.
+ *  Imprime errorres a stderr. Utiliza la función PAPI_read_counters de la API de alto nivel.
  **/
 void PAPI_readCounters(long long int* valuesRead, unsigned int numEvents);
 
@@ -33,5 +33,11 @@ void PAPI_readCounters(long long int* valuesRead, unsigned int numEvents);
  *  Inicializa la API de bajo nivel de PAPI.
  **/
 void PAPI_init();
+
+/**
+ *  Detiene los contadores y copia la cuenta actual a valuesRead. Utiliza la función
+ *  PAPI_stop_counters de la API de alto nivel.
+ **/
+void PAPI_stopCounters(long long int* valuesRead, unsigned int numEvents);
 
 #endif // PAPI_UTILS_H_INCLUDED
