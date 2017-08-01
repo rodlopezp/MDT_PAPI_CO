@@ -51,6 +51,8 @@
 		</Compiler>
 		<Unit filename="main.cpp" />
 		<Unit filename="matrix_functions.h" />
+		<Unit filename="matrix_tests.cpp" />
+		<Unit filename="matrix_tests.h" />
 		<Unit filename="papi_utils.cpp" />
 		<Unit filename="papi_utils.h" />
 		<Extensions>

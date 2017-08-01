@@ -5,7 +5,6 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
-#include <array>
 
 /**
  * Estructura base para una matriz de enteros.
@@ -23,7 +22,7 @@ struct matrix{
  **/
 template <typename T>
 void matrix_transpose_naive(matrix<T>* inMatrix, matrix<T>* outMatrix,
-                            int rows, int cols,
+                            unsigned int rows, unsigned int cols,
                             unsigned int rowOffset, unsigned int colOffset){
     const unsigned int rowLimit = rowOffset + rows;
     const unsigned int colLimit = colOffset + cols;
@@ -100,7 +99,8 @@ void randFloat_init_matrix(matrix<T>* matrix, float upper_limit){
 const int minSubMatrixSize = 8; //Tamaño mínimo de la sub-matriz.
 template <typename T>
 void matrix_transpose_co(matrix<T>* inMatrix, matrix<T>* outMatrix,
-                         int rows, int cols, int rowOffset, int colOffset){
+                         unsigned int rows, unsigned int cols,
+                         unsigned int rowOffset, unsigned int colOffset){
     if( rows > minSubMatrixSize || cols > minSubMatrixSize){
         if( cols >= rows){
             const int halfCols = cols / 2;

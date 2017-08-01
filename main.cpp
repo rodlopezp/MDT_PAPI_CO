@@ -4,8 +4,15 @@
 
 #include "matrix_functions.h"
 #include "papi_utils.h"
+#include "matrix_tests.h"
 
-const int DEBUG = 0;
+enum DEBUG_MODE{
+    NODEBUG =   0,
+    PRINT   =   1,
+    ASSERT  =   2,
+};
+
+DEBUG_MODE DEBUG = ASSERT;
 
 int main ()
 {
@@ -21,7 +28,7 @@ int main ()
 
     randFloat_init_matrix(&test, 1.0);
 
-    if (DEBUG == 1) { print_matrix(&test); }
+    if (DEBUG == PRINT) { print_matrix(&test); }
 
     int events[2] = {PAPI_L1_TCM, PAPI_L2_TCM};
     long long values[2];
@@ -38,7 +45,7 @@ int main ()
     printf("L1 total cache misses = %lld\n", values[0]);
     printf("L2 total cache misses = %lld\n", values[1]);
 
-    if (DEBUG == 1) { print_matrix(&outTest); }
+    if (DEBUG == PRINT) { print_matrix(&outTest); }
 
     PAPI_stopCounters(values, 1);
 
@@ -54,7 +61,7 @@ int main ()
     printf("L1 total cache misses = %lld\n", values[0]);
     printf("L2 total cache misses = %lld\n", values[1]);
 
-    if (DEBUG == 1) { print_matrix(&test); }
+    if (DEBUG == PRINT) { print_matrix(&test); }
 
     dealloc_matrix(&test);
 

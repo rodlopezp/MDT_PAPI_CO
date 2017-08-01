@@ -140,12 +140,11 @@
 	<bits/types.h>
 	<xlocale.h>
 
-1501192756 /home/forro/Dropbox/PMT/PAPI/PAPI_cache/matrix_functions.h
+1501620610 /home/forro/Dropbox/PMT/PAPI/PAPI_cache/matrix_functions.h
 	<cstdio>
 	<cstdlib>
 	<ctime>
 	<iostream>
-	<array>
 
 1480970252 source:/home/forro/Dropbox/PMT/PAPI/PAPI_cache/matrix_functions.c
 	"matrix_functions.h"
@@ -162,9 +161,10 @@
 1501191172 source:/home/forro/Dropbox/PMT/PAPI/PAPI_cache/papi_utils.cpp
 	"papi_utils.h"
 
-1501192728 source:/home/forro/Dropbox/PMT/PAPI/PAPI_cache/main.cpp
+1501626440 source:/home/forro/Dropbox/PMT/PAPI/PAPI_cache/main.cpp
 	"matrix_functions.h"
 	"papi_utils.h"
+	"matrix_tests.h"
 
 1480976153 source:/home/forro/Dropbox/PMT/PAPI/PAPI_cache/matrix_functions.cpp
 	"matrix_functions.h"
@@ -176,4 +176,18 @@
 	<signal.h>
 
 1479496491 /home/forro/Downloads/papi-5.5.1/src/papiStdEventDefs.h
+
+1501626643 source:/home/forro/Dropbox/PMT/PAPI/PAPI_cache/matrix_tests.cpp
+	"matrix_tests.h"
+
+1501626293 /home/forro/Dropbox/PMT/PAPI/PAPI_cache/matrix_tests.h
+	"matrix_functions.h"
+	"papi_utils.h"
+	<vector>
+	<assert.h>
+	<iostream>
+	<chrono>
+	<ctime>
+	<fstream>
+	<string>
 
