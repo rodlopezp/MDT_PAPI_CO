@@ -22,12 +22,14 @@ int main ()
     PAPI_init();
     PAPI_counterCheck();
 
-    unsigned int initial_size = 8;
+    unsigned int half_initial_size = 8;
     std::vector<unsigned int> matrix_sizes(5);
-    std::string test_name = "test_naive";
+    std::string test_name = "test_co";
     std::generate(matrix_sizes.begin(), matrix_sizes.end(),
-                  [&]{return initial_size *= 2;});
-    run_matrix_algo_test_naive_float(100, matrix_sizes, test_name);
+                  [&]{return half_initial_size *= 2;});
+
+    run_matrix_algo_test(matrix_transpose_naive<float>, 100, matrix_sizes, "test_naive");
+    run_matrix_algo_test(matrix_transpose_co<float>, 100, matrix_sizes, test_name);
 
     return 0;
 }
