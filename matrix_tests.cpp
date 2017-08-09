@@ -17,10 +17,10 @@ std::ofstream open_test_file(std::string testName) {
     std::stringstream timeString;
     timeString << std::put_time(std::localtime(&start_time), "%c %Z");
 
-    std::string fileName = "test_results_" + testName + "_";
-    fileName += timeString.str();
+    std::string fileName = "test_results_" + testName;
     fileName += ".txt";
     testResults.open(fileName);
+    testResults << "Hora de prueba: " << timeString.str() << '\n';
 
     return testResults;
 }

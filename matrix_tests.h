@@ -74,7 +74,7 @@ void run_matrix_algo_test(matrix_transform<T> matTrans, unsigned int numIter,
     std::vector<long long int> cache_misses_L1(numIter), cache_misses_L2(numIter);
     std::vector<float> time_spent(numIter);
     std::size_t avg_L1_misses, avg_L2_misses;
-    double avg_time_spent;
+    float avg_time_spent;
     std::cout << "Ejecutando prueba " << testName << "...\n";
 
     for(auto matrixSize : matrixSizes){
@@ -103,18 +103,11 @@ void run_matrix_algo_test(matrix_transform<T> matTrans, unsigned int numIter,
         avg_L2_misses = avg_L2_misses / cache_misses_L1.size();
 
         avg_time_spent = std::accumulate(time_spent.begin(), time_spent.end(), 0.0f);
-        avg_time_spent = avg_L2_misses / time_spent.size();
+        avg_time_spent = avg_time_spent / static_cast<float>(time_spent.size());
 
         testResults << "Tiempo de ejecución promedio: " << avg_time_spent << "s\n";
         testResults << "Promedio de fallas de cache L1 totales: " << avg_L1_misses << "\n";
         testResults << "Promedio de fallas de cache L2 totales: " << avg_L2_misses << "\n";
-
-        if(false){
-            testResults << "DEBUG INFO:\n";
-            for(auto value : time_spent){
-                testResults << value << '\n';
-            }
-        }
     }
 }
 

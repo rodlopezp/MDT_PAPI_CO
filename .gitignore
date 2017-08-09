@@ -3,3 +3,5 @@
 /.vscode/
 /main_old
 /matrix_functions
+/debug_options.h.gch
+/options.h
