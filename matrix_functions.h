@@ -120,4 +120,21 @@ void matrix_transpose_co(matrix<T>* inMatrix, matrix<T>* outMatrix,
     }
 }
 
+/**
+ *  Algoritmo naive que multiplica dos matrices (A (n x m) y B (m x p)) y guarda el resultado en outMatrix.
+ *  Este algoritmo incurre en O(nmp) operaciones, y (en el peor caso) O(nmp) fallas de cache.
+ **/
+template <typename T>
+void matrix_multiply_naive(matrix<T>* outMatrix, matrix<T>* matrixA, matrix<T>* matrixB){
+    for(unsigned int i = 0; i < matrixA->rows; i++){
+        for(unsigned int j = 0; j < matrixB->cols; j++){
+            T sum = 0;
+            for(unsigned int k = 0; k < matrixA->cols; k++){
+                sum += matrixA->elements[i * matrixA->rows + k] * matrixB->elements[k * matrixB->cols + j];
+            }
+            outMatrix->elements[i * matrixA->rows + j] = sum;
+        }
+    }
+}
+
 #endif // MATRIX_FUNCTIONS_H_INCLUDED
