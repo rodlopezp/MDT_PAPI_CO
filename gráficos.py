@@ -46,6 +46,7 @@ naiveResults = filter(None, naiveResults)  #Remueve lineas vacías
 coResults = map(lambda s: s.strip(), coResults) #Remueve '\n' de todas las lines
 coResults = filter(None, coResults)  #Remueve lineas vacías
 
+###Listas para guardar resultados
 sizes = []
 sizesCO = []
 
@@ -117,6 +118,7 @@ plt.savefig("resultadosL1.png", bbox = 'Tight')
 
 ax.clear()
 fig.canvas.draw()
+ax.legend((rects1[0], rects2[0]),("Naive", "Cache-oblivious"), loc=2)
 ax.set_ylabel("Fallas de cache L2")
 ax.set_xlabel(u"Tamaño de la matriz")
 ax.set_title(u"Transposición de matrices (fallas de cache L2)")
