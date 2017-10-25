@@ -23,7 +23,8 @@ struct matrix {
 template <typename T>
 void matrix_transpose_naive(matrix<T>* inMatrix, matrix<T>* outMatrix,
                             unsigned int rows, unsigned int cols,
-                            unsigned int rowOffset, unsigned int colOffset) {
+                            unsigned int rowOffset, unsigned int colOffset,
+                            const unsigned int minSubMatrixSize = 0) {
     const unsigned int rowLimit = rowOffset + rows;
     const unsigned int colLimit = colOffset + cols;
     for(unsigned int i = rowOffset; i < rowLimit; i++) {
@@ -96,22 +97,25 @@ void randFloat_init_matrix(matrix<T>* matrix, float upper_limit) {
  *  Algoritmo recursivo que divide el problema hasta un límite (arbitrario), que luego invoca a
  *  matrix_transpose_naive.
 **/
-const int minSubMatrixSize = 8; //Tamaño mínimo de la sub-matriz.
+//const int minSubMatrixSize = 1; //Tamaño mínimo de la sub-matriz.
 template <typename T>
 void matrix_transpose_co(matrix<T>* inMatrix, matrix<T>* outMatrix,
                          unsigned int rows, unsigned int cols,
-                         unsigned int rowOffset, unsigned int colOffset) {
+                         unsigned int rowOffset, unsigned int colOffset,
+                         const unsigned int minSubMatrixSize = 1) {
     if( rows > minSubMatrixSize || cols > minSubMatrixSize) {
         if( cols >= rows) {
             const int halfCols = cols / 2;
-            matrix_transpose_co(inMatrix, outMatrix, rows, halfCols, rowOffset, colOffset);
+            matrix_transpose_co(inMatrix, outMatrix, rows, halfCols, rowOffset, colOffset,
+                                minSubMatrixSize);
             matrix_transpose_co(inMatrix, outMatrix, rows, halfCols, rowOffset,
-                                colOffset + halfCols);
+                                colOffset + halfCols, minSubMatrixSize);
         } else {
             const int halfRows = rows / 2;
-            matrix_transpose_co(inMatrix, outMatrix, halfRows, cols, rowOffset, colOffset);
+            matrix_transpose_co(inMatrix, outMatrix, halfRows, cols, rowOffset, colOffset,
+                                minSubMatrixSize);
             matrix_transpose_co(inMatrix, outMatrix, halfRows, cols, rowOffset + halfRows,
-                                colOffset);
+                                colOffset, minSubMatrixSize);
         }
     } else {
         matrix_transpose_naive(inMatrix, outMatrix, rows, cols, rowOffset, colOffset);

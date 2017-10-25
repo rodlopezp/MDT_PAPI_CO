@@ -31,12 +31,19 @@ int main ()
 //    std::cout << "Tiempo de ejecución: " << (timeEnd - timeStart) << "s\n";
 
     unsigned int half_initial_size = 8;
-    std::vector<unsigned int> matrix_sizes(10);
+    std::vector<unsigned int> matrix_sizes(5);
     std::generate(matrix_sizes.begin(), matrix_sizes.end(),
                   [&]{return half_initial_size *= 2;});
 
-    run_matrix_algo_test(matrix_transpose_naive<float>, 256, matrix_sizes, "naive");
-    run_matrix_algo_test(matrix_transpose_co<float>, 256, matrix_sizes, "co");
+    unsigned int leafSize = 1;
+    std::vector<unsigned int> leafSizes(4);
+    std::generate(leafSizes.begin(), leafSizes.end(),
+                  [&]{return leafSize *= 2;});
+    leafSizes.emplace(leafSizes.begin(), 1);
+
+    //const unsigned int minSubMatrixSize = 1;
+    run_matrix_algo_test(matrix_transpose_naive<float>, 256, matrix_sizes, "naive", leafSizes);
+    run_matrix_algo_test(matrix_transpose_co<float>, 256, matrix_sizes, "co", leafSizes);
 
     return 0;
 }
