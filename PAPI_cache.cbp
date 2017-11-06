@@ -14,22 +14,20 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
-					<Add option="-march=native" />
 					<Add option="-Weffc++" />
+					<Add option="-Wextra" />
 					<Add option="-Wall" />
-					<Add option="-std=c++14" />
+					<Add option="-std=c++1z" />
 					<Add option="-m64" />
 					<Add option="-g" />
-					<Add directory="/home/forro/Downloads/papi-5.5.1" />
-					<Add directory="/home/forro/Downloads/papi-5.5.1/src" />
+					<Add option="-march=native" />
+					<Add directory="papi-5.5.1/src" />
 				</Compiler>
 				<Linker>
 					<Add option="-m64" />
-					<Add library="/home/forro/Downloads/papi-5.5.1/src/libpapi.a" />
-					<Add library="/home/forro/Downloads/papi-5.5.1/src/libpfm4/lib/libpfm.a" />
-					<Add library="/home/forro/Downloads/papi-5.5.1/src/libpapi.so" />
-					<Add library="/home/forro/Downloads/papi-5.5.1/src/libpfm4/lib/libpfm.so" />
-					<Add directory="/home/forro/Downloads/papi-5.5.1" />
+					<Add library="papi-5.5.1/src/libpapi.a" />
+					<Add library="papi-5.5.1/src/libpapi.so" />
+					<Add directory="papi-5.5.1/src" />
 				</Linker>
 			</Target>
 			<Target title="Release">
