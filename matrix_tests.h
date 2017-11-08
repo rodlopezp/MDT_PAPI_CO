@@ -38,7 +38,7 @@ using matrix_transform = void (*) (matrix<T>*, matrix<T>*, unsigned int, unsigne
  *  mediciones se guardan en testResults.
  **/
 template <typename T>
-void run_matrix_algo_iter(matrix_transform<T> matTrans, unsigned int iter, matrix<T>* matIn,
+void run_matrix_algo_iter(matrix_transform<T> matTrans, matrix<T>* matIn,
                           matrix<T>* matOut, std::vector<long long>& cache_misses_L1,
                           std::vector<long long>& cache_misses_L2,
                           std::vector<float>& time_spent,
@@ -60,13 +60,15 @@ void run_matrix_algo_iter(matrix_transform<T> matTrans, unsigned int iter, matri
 
     cache_misses_L1.push_back(values[0]);
     cache_misses_L2.push_back(values[1]);
-    //cache_misses_L2.push_back(values[2]);
     time_spent.push_back(test_time);
 }
 
+/**
+ *  Calcula el promedio de los valores contenidos en values.
+ **/
 template <typename T>
-T get_average(std::vector<T> values){
-    T avgValue = std::accumulate(values.begin(), values.end(), 0);
+auto get_average(std::vector<T> values){
+    T avgValue = std::accumulate(std::next(values.begin()), values.end(), values[0]);
     avgValue = avgValue / static_cast<T>(values.size());
     return avgValue;
 }
@@ -90,7 +92,7 @@ void run_matrix_algo_test(matrix_transform<T> matTrans, unsigned int numIter,
     std::cout << "Ejecutando prueba " << testName << "...\n";
 
     for(auto leafSize : leafSizes){
-        std::cout << "Tamaño de submatriz: " << leafSize << '\n';
+        std::cout << "Tamaño mínimo de submatriz: " << leafSize << '\n';
         testResults << "Tamaño mínimo de submatriz: " << leafSize << "\n";
         for(auto matrixSize : matrixSizes){
             cache_misses_L1.clear();
@@ -102,10 +104,11 @@ void run_matrix_algo_test(matrix_transform<T> matTrans, unsigned int numIter,
             alloc_matrix(&matOut, matrixSize, matrixSize);
             randFloat_init_matrix(&matIn, 10.0);
 
-            std::cout << "Ejecutando prueba para matriz " << matrixSize << 'x' << matrixSize << "...\n";
+            std::cout << "Ejecutando prueba para matriz " << matrixSize << 'x' << matrixSize
+            << "...\n";
 
             for(unsigned int iter = 0; iter < numIter; iter++){
-                run_matrix_algo_iter(matTrans,iter, &matIn, &matOut, cache_misses_L1, cache_misses_L2,
+                run_matrix_algo_iter(matTrans, &matIn, &matOut, cache_misses_L1, cache_misses_L2,
                                      time_spent, leafSize);
             }
 

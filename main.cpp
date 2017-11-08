@@ -31,7 +31,7 @@ int main ()
 //    std::cout << "Tiempo de ejecución: " << (timeEnd - timeStart) << "s\n";
 
     unsigned int half_initial_size = 8;
-    std::vector<unsigned int> matrix_sizes(5);
+    std::vector<unsigned int> matrix_sizes(7);
     std::generate(matrix_sizes.begin(), matrix_sizes.end(),
                   [&]{return half_initial_size *= 2;});
 
@@ -41,8 +41,9 @@ int main ()
                   [&]{return leafSize *= 2;});
     leafSizes.emplace(leafSizes.begin(), 1);
 
-    //const unsigned int minSubMatrixSize = 1;
-    run_matrix_algo_test(matrix_transpose_naive<float>, 256, matrix_sizes, "naive", leafSizes);
+    std::vector<unsigned int> dummy {0}; //Algoritmo naive no necesita ejecutarse para distintos
+                                         //tamaños.
+    run_matrix_algo_test(matrix_transpose_naive<float>, 256, matrix_sizes, "naive", dummy);
     run_matrix_algo_test(matrix_transpose_co<float>, 256, matrix_sizes, "co", leafSizes);
 
     return 0;

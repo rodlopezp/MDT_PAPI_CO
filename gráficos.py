@@ -59,9 +59,11 @@ avgL1CacheMissesCO = []
 avgL2CacheMisses = []
 avgL2CacheMissesCO = []
 
+leafSizes = []
+
 ###Parsing###
 for line in naiveResults:
-    if "Tamaño" in line:
+    if "Tamaño de matriz" in line:
         sizes.append(int(line.strip("Tamaño de matriz: ")))
     elif "Tiempo" in line:
         line = line.strip("Tiempo de ejecución promedio: ")
@@ -74,8 +76,10 @@ for line in naiveResults:
         avgL2CacheMisses.append(int(line))
 
 for line in coResults:
-    if "Tamaño" in line:
+    if "Tamaño de matriz" in line:
         sizesCO.append(int(line.strip("Tamaño de matriz: ")))
+    elif "submatriz" in line:
+        leafSizes.append(int(line.strip("Tamaño mínimo de submatriz: ")))
     elif "Tiempo" in line:
         line = line.strip("Tiempo de ejecución promedio: ")
         avgTimeSpentCO.append(float(line.rstrip(" s")))
@@ -101,7 +105,7 @@ ax.set_ylabel("Tiempo[s]")
 ax.set_xlabel(u"Tamaño de la matriz")
 ax.set_title(u"Transposición de matrices (tiempo de ejecución)")
 rects1 = ax.bar(index, avgTimeSpent, 2 * width, color = 'r', log = True)
-rects2 = ax.bar(index+ 2.5 * width, avgTimeSpentCO, 2 * width, color = 'y', log = True)
+rects2 = ax.bar(index+ 2.5 * width, avgTimeSpentCO[0:len(sizes)], 2 * width, color = 'y', log = True)
 ax.legend((rects1[0], rects2[0]),("Naive", "Cache-oblivious"), loc=2)
 autolabel(rects1)
 autolabel(rects2)
@@ -111,7 +115,7 @@ ax.set_ylabel("Fallas de cache L1")
 ax.set_xlabel(u"Tamaño de la matriz")
 ax.set_title(u"Transposición de matrices (fallas de cache L1)")
 rects1 = ax.bar(index, avgL1CacheMisses, 2 * width, color = 'r', log = True)
-rects2 = ax.bar(index+ 2.5 * width, avgL1CacheMissesCO, 2 * width, color = 'y', log = True)
+rects2 = ax.bar(index+ 2.5 * width, avgL1CacheMissesCO[0:len(sizes)], 2 * width, color = 'y', log = True)
 autolabel(rects1)
 autolabel(rects2)
 plt.savefig("resultadosL1.png", bbox = 'Tight')
@@ -123,7 +127,7 @@ ax.set_ylabel("Fallas de cache L2")
 ax.set_xlabel(u"Tamaño de la matriz")
 ax.set_title(u"Transposición de matrices (fallas de cache L2)")
 rects1 = ax.bar(index, avgL2CacheMisses, 2 * width, color = 'r', log = True)
-rects2 = ax.bar(index+ 2.5 * width, avgL2CacheMissesCO, 2 * width, color = 'y', log = True)
+rects2 = ax.bar(index+ 2.5 * width, avgL2CacheMissesCO[0:len(sizes)], 2 * width, color = 'y', log = True)
 autolabel(rects1)
 autolabel(rects2)
 plt.savefig("resultadosL2.png", bbox = 'Tight')
