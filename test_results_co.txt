@@ -1,0 +1,206 @@
+Hora de prueba: Mon Nov 13 20:01:54 2017 -03
+Tamaño mínimo de submatriz: 1
+Tamaño de matriz: 16
+Tiempo de ejecución promedio: 4.85182e-05s
+Promedio de fallas de cache L1 totales: 64
+Promedio de fallas de cache L2 totales: 9
+Tamaño de matriz: 32
+Tiempo de ejecución promedio: 6.71148e-05s
+Promedio de fallas de cache L1 totales: 75
+Promedio de fallas de cache L2 totales: 15
+Tamaño de matriz: 64
+Tiempo de ejecución promedio: 0.000132084s
+Promedio de fallas de cache L1 totales: 88
+Promedio de fallas de cache L2 totales: 18
+Tamaño de matriz: 128
+Tiempo de ejecución promedio: 0.000409365s
+Promedio de fallas de cache L1 totales: 165
+Promedio de fallas de cache L2 totales: 42
+Tamaño de matriz: 256
+Tiempo de ejecución promedio: 0.00141287s
+Promedio de fallas de cache L1 totales: 235
+Promedio de fallas de cache L2 totales: 63
+Tamaño de matriz: 512
+Tiempo de ejecución promedio: 0.00582588s
+Promedio de fallas de cache L1 totales: 2318
+Promedio de fallas de cache L2 totales: 365
+Tamaño de matriz: 1024
+Tiempo de ejecución promedio: 0.0219198s
+Promedio de fallas de cache L1 totales: 1786
+Promedio de fallas de cache L2 totales: 370
+Tamaño de matriz: 2048
+Tiempo de ejecución promedio: 0.101418s
+Promedio de fallas de cache L1 totales: 40352
+Promedio de fallas de cache L2 totales: 7259
+Tamaño de matriz: 4096
+Tiempo de ejecución promedio: 0.424301s
+Promedio de fallas de cache L1 totales: 234080
+Promedio de fallas de cache L2 totales: 38643
+Tamaño de matriz: 8192
+Tiempo de ejecución promedio: 1.52329s
+Promedio de fallas de cache L1 totales: 509836
+Promedio de fallas de cache L2 totales: 77475
+Tamaño mínimo de submatriz: 2
+Tamaño de matriz: 16
+Tiempo de ejecución promedio: 4.86374e-05s
+Promedio de fallas de cache L1 totales: 71
+Promedio de fallas de cache L2 totales: 17
+Tamaño de matriz: 32
+Tiempo de ejecución promedio: 5.65052e-05s
+Promedio de fallas de cache L1 totales: 82
+Promedio de fallas de cache L2 totales: 20
+Tamaño de matriz: 64
+Tiempo de ejecución promedio: 8.13007e-05s
+Promedio de fallas de cache L1 totales: 106
+Promedio de fallas de cache L2 totales: 27
+Tamaño de matriz: 128
+Tiempo de ejecución promedio: 0.000181913s
+Promedio de fallas de cache L1 totales: 150
+Promedio de fallas de cache L2 totales: 32
+Tamaño de matriz: 256
+Tiempo de ejecución promedio: 0.000561237s
+Promedio de fallas de cache L1 totales: 232
+Promedio de fallas de cache L2 totales: 44
+Tamaño de matriz: 512
+Tiempo de ejecución promedio: 0.00208259s
+Promedio de fallas de cache L1 totales: 420
+Promedio de fallas de cache L2 totales: 77
+Tamaño de matriz: 1024
+Tiempo de ejecución promedio: 0.00875354s
+Promedio de fallas de cache L1 totales: 4796
+Promedio de fallas de cache L2 totales: 761
+Tamaño de matriz: 2048
+Tiempo de ejecución promedio: 0.0330107s
+Promedio de fallas de cache L1 totales: 7000
+Promedio de fallas de cache L2 totales: 1181
+Tamaño de matriz: 4096
+Tiempo de ejecución promedio: 0.133875s
+Promedio de fallas de cache L1 totales: 41850
+Promedio de fallas de cache L2 totales: 6540
+Tamaño de matriz: 8192
+Tiempo de ejecución promedio: 0.561498s
+Promedio de fallas de cache L1 totales: 219836
+Promedio de fallas de cache L2 totales: 39140
+Tamaño mínimo de submatriz: 4
+Tamaño de matriz: 16
+Tiempo de ejecución promedio: 4.673e-05s
+Promedio de fallas de cache L1 totales: 66
+Promedio de fallas de cache L2 totales: 10
+Tamaño de matriz: 32
+Tiempo de ejecución promedio: 5.10216e-05s
+Promedio de fallas de cache L1 totales: 83
+Promedio de fallas de cache L2 totales: 17
+Tamaño de matriz: 64
+Tiempo de ejecución promedio: 6.58035e-05s
+Promedio de fallas de cache L1 totales: 110
+Promedio de fallas de cache L2 totales: 22
+Tamaño de matriz: 128
+Tiempo de ejecución promedio: 0.000120163s
+Promedio de fallas de cache L1 totales: 165
+Promedio de fallas de cache L2 totales: 28
+Tamaño de matriz: 256
+Tiempo de ejecución promedio: 0.000325203s
+Promedio de fallas de cache L1 totales: 252
+Promedio de fallas de cache L2 totales: 30
+Tamaño de matriz: 512
+Tiempo de ejecución promedio: 0.00115728s
+Promedio de fallas de cache L1 totales: 496
+Promedio de fallas de cache L2 totales: 72
+Tamaño de matriz: 1024
+Tiempo de ejecución promedio: 0.00451517s
+Promedio de fallas de cache L1 totales: 1311
+Promedio de fallas de cache L2 totales: 206
+Tamaño de matriz: 2048
+Tiempo de ejecución promedio: 0.0181251s
+Promedio de fallas de cache L1 totales: 5764
+Promedio de fallas de cache L2 totales: 916
+Tamaño de matriz: 4096
+Tiempo de ejecución promedio: 0.0879035s
+Promedio de fallas de cache L1 totales: 94798
+Promedio de fallas de cache L2 totales: 18698
+Tamaño de matriz: 8192
+Tiempo de ejecución promedio: 0.29718s
+Promedio de fallas de cache L1 totales: 155716
+Promedio de fallas de cache L2 totales: 26016
+Tamaño mínimo de submatriz: 8
+Tamaño de matriz: 16
+Tiempo de ejecución promedio: 4.76837e-05s
+Promedio de fallas de cache L1 totales: 71
+Promedio de fallas de cache L2 totales: 13
+Tamaño de matriz: 32
+Tiempo de ejecución promedio: 5.10216e-05s
+Promedio de fallas de cache L1 totales: 96
+Promedio de fallas de cache L2 totales: 18
+Tamaño de matriz: 64
+Tiempo de ejecución promedio: 6.19888e-05s
+Promedio de fallas de cache L1 totales: 139
+Promedio de fallas de cache L2 totales: 25
+Tamaño de matriz: 128
+Tiempo de ejecución promedio: 0.000114441s
+Promedio de fallas de cache L1 totales: 284
+Promedio de fallas de cache L2 totales: 58
+Tamaño de matriz: 256
+Tiempo de ejecución promedio: 0.000270367s
+Promedio de fallas de cache L1 totales: 466
+Promedio de fallas de cache L2 totales: 60
+Tamaño de matriz: 512
+Tiempo de ejecución promedio: 0.000905037s
+Promedio de fallas de cache L1 totales: 932
+Promedio de fallas de cache L2 totales: 95
+Tamaño de matriz: 1024
+Tiempo de ejecución promedio: 0.00352764s
+Promedio de fallas de cache L1 totales: 3126
+Promedio de fallas de cache L2 totales: 264
+Tamaño de matriz: 2048
+Tiempo de ejecución promedio: 0.0137944s
+Promedio de fallas de cache L1 totales: 11794
+Promedio de fallas de cache L2 totales: 980
+Tamaño de matriz: 4096
+Tiempo de ejecución promedio: 0.0571127s
+Promedio de fallas de cache L1 totales: 61379
+Promedio de fallas de cache L2 totales: 6902
+Tamaño de matriz: 8192
+Tiempo de ejecución promedio: 0.251437s
+Promedio de fallas de cache L1 totales: 405427
+Promedio de fallas de cache L2 totales: 59650
+Tamaño mínimo de submatriz: 16
+Tamaño de matriz: 16
+Tiempo de ejecución promedio: 4.43459e-05s
+Promedio de fallas de cache L1 totales: 87
+Promedio de fallas de cache L2 totales: 12
+Tamaño de matriz: 32
+Tiempo de ejecución promedio: 4.91142e-05s
+Promedio de fallas de cache L1 totales: 123
+Promedio de fallas de cache L2 totales: 15
+Tamaño de matriz: 64
+Tiempo de ejecución promedio: 5.8651e-05s
+Promedio de fallas de cache L1 totales: 201
+Promedio de fallas de cache L2 totales: 24
+Tamaño de matriz: 128
+Tiempo de ejecución promedio: 9.67979e-05s
+Promedio de fallas de cache L1 totales: 350
+Promedio de fallas de cache L2 totales: 35
+Tamaño de matriz: 256
+Tiempo de ejecución promedio: 0.00025177s
+Promedio de fallas de cache L1 totales: 806
+Promedio de fallas de cache L2 totales: 76
+Tamaño de matriz: 512
+Tiempo de ejecución promedio: 0.000841618s
+Promedio de fallas de cache L1 totales: 2455
+Promedio de fallas de cache L2 totales: 154
+Tamaño de matriz: 1024
+Tiempo de ejecución promedio: 0.00333452s
+Promedio de fallas de cache L1 totales: 10997
+Promedio de fallas de cache L2 totales: 556
+Tamaño de matriz: 2048
+Tiempo de ejecución promedio: 0.0132799s
+Promedio de fallas de cache L1 totales: 43044
+Promedio de fallas de cache L2 totales: 2945
+Tamaño de matriz: 4096
+Tiempo de ejecución promedio: 0.0525389s
+Promedio de fallas de cache L1 totales: 161738
+Promedio de fallas de cache L2 totales: 9835
+Tamaño de matriz: 8192
+Tiempo de ejecución promedio: 0.208555s
+Promedio de fallas de cache L1 totales: 644556
+Promedio de fallas de cache L2 totales: 35723

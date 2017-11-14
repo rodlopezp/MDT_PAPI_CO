@@ -31,7 +31,7 @@ int main ()
 //    std::cout << "Tiempo de ejecución: " << (timeEnd - timeStart) << "s\n";
 
     unsigned int half_initial_size = 8;
-    std::vector<unsigned int> matrix_sizes(7);
+    std::vector<unsigned int> matrix_sizes(10);
     std::generate(matrix_sizes.begin(), matrix_sizes.end(),
                   [&]{return half_initial_size *= 2;});
 

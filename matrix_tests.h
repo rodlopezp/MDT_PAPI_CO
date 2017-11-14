@@ -115,16 +115,8 @@ void run_matrix_algo_test(matrix_transform<T> matTrans, unsigned int numIter,
             dealloc_matrix(&matIn);
             dealloc_matrix(&matOut);
 
-//            avg_L1_misses = std::accumulate(cache_misses_L1.begin(), cache_misses_L1.end(), 0LL);
-//            avg_L1_misses = avg_L1_misses / cache_misses_L1.size();
             avg_L1_misses = get_average(cache_misses_L1);
-
-//            avg_L2_misses = std::accumulate(cache_misses_L2.begin(), cache_misses_L2.end(), 0LL);
-//            avg_L2_misses = avg_L2_misses / cache_misses_L2.size();
             avg_L2_misses = get_average(cache_misses_L2);
-
-//            avg_time_spent = std::accumulate(time_spent.begin(), time_spent.end(), 0.0f);
-//            avg_time_spent = avg_time_spent / static_cast<float>(time_spent.size());
             avg_time_spent = get_average(time_spent);
 
             testResults << "Tiempo de ejecución promedio: " << avg_time_spent << "s\n";

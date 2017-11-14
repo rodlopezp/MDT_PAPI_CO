@@ -1,0 +1,42 @@
+Hora de prueba: Mon Nov 13 19:54:35 2017 -03
+Tamaño mínimo de submatriz: 0
+Tamaño de matriz: 16
+Tiempo de ejecución promedio: 7.88436e-05s
+Promedio de fallas de cache L1 totales: 102
+Promedio de fallas de cache L2 totales: 52
+Tamaño de matriz: 32
+Tiempo de ejecución promedio: 8.9211e-05s
+Promedio de fallas de cache L1 totales: 214
+Promedio de fallas de cache L2 totales: 94
+Tamaño de matriz: 64
+Tiempo de ejecución promedio: 0.000102676s
+Promedio de fallas de cache L1 totales: 717
+Promedio de fallas de cache L2 totales: 248
+Tamaño de matriz: 128
+Tiempo de ejecución promedio: 0.000176059s
+Promedio de fallas de cache L1 totales: 17478
+Promedio de fallas de cache L2 totales: 446
+Tamaño de matriz: 256
+Tiempo de ejecución promedio: 0.000744781s
+Promedio de fallas de cache L1 totales: 69870
+Promedio de fallas de cache L2 totales: 46359
+Tamaño de matriz: 512
+Tiempo de ejecución promedio: 0.00332708s
+Promedio de fallas de cache L1 totales: 279689
+Promedio de fallas de cache L2 totales: 278852
+Tamaño de matriz: 1024
+Tiempo de ejecución promedio: 0.0232231s
+Promedio de fallas de cache L1 totales: 1171448
+Promedio de fallas de cache L2 totales: 1126486
+Tamaño de matriz: 2048
+Tiempo de ejecución promedio: 0.0989751s
+Promedio de fallas de cache L1 totales: 5460881
+Promedio de fallas de cache L2 totales: 4565911
+Tamaño de matriz: 4096
+Tiempo de ejecución promedio: 0.407999s
+Promedio de fallas de cache L1 totales: 26329426
+Promedio de fallas de cache L2 totales: 19692982
+Tamaño de matriz: 8192
+Tiempo de ejecución promedio: 1.17362s
+Promedio de fallas de cache L1 totales: 138829049
+Promedio de fallas de cache L2 totales: 92017065
