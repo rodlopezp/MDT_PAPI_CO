@@ -1,8 +1,10 @@
 #ifndef MATRIX_TESTS_H_INCLUDED
 #define MATRIX_TESTS_H_INCLUDED
 
+#include "json.hpp"
 #include "matrix_functions.h"
 #include "papi_utils.h"
+
 
 #include <vector>
 #include <assert.h>

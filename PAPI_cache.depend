@@ -199,7 +199,7 @@
 
 1502230645 /home/forro/Dropbox/PMT/PAPI/PAPI_cache/options.h
 
-1510178623 source:/home/rodrigo/Documents/MDT_PAPI_CO/main.cpp
+1510613672 source:/home/rodrigo/Documents/MDT_PAPI_CO/main.cpp
 	"matrix_functions.h"
 	"papi_utils.h"
 	"matrix_tests.h"
@@ -217,9 +217,10 @@
 	<cstdlib>
 	<cerrno>
 
-1510607927 /home/rodrigo/Documents/MDT_PAPI_CO/matrix_tests.h
+1512074819 /home/rodrigo/Documents/MDT_PAPI_CO/matrix_tests.h
 	"matrix_functions.h"
 	"papi_utils.h"
+	"json.hpp"
 	<vector>
 	<assert.h>
 	<iostream>
@@ -244,4 +245,33 @@
 	<signal.h>
 
 1479496491 /home/rodrigo/Documents/MDT_PAPI_CO/papi-5.5.1/src/papiStdEventDefs.h
+
+1512073269 /home/rodrigo/Documents/MDT_PAPI_CO/json.hpp
+	<algorithm>
+	<array>
+	<cassert>
+	<cctype>
+	<ciso646>
+	<cmath>
+	<cstddef>
+	<cstdint>
+	<cstdlib>
+	<cstring>
+	<forward_list>
+	<functional>
+	<initializer_list>
+	<iomanip>
+	<iostream>
+	<iterator>
+	<limits>
+	<locale>
+	<map>
+	<memory>
+	<numeric>
+	<sstream>
+	<stdexcept>
+	<string>
+	<type_traits>
+	<utility>
+	<vector>
 
